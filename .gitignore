@@ -1,4 +1,5 @@
-Frontend/node_modules/
-Frontend/.cache/
-Frontend/public
-Frontend/src/gatsby-types.d.ts
+*/node_modules/
+*/.cache/
+*/public
+*/src/gatsby-types.d.ts
+Frontend
