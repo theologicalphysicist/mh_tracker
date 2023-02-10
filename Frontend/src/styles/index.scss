@@ -1,0 +1,35 @@
+$debug-border: 1px solid #000;
+
+main {
+    font-family: Ubuntu;
+    width: 80%;
+    margin: auto;
+    display: block;
+    border: $debug-border;
+    padding: 1rem;
+    header {
+        border: $debug-border;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .main {
+        display: block;
+        width: 100%;
+        border: $debug-border;
+        padding: 1rem;
+        p {
+            display: block;
+            margin: auto;
+            border: $debug-border;
+        }
+        .form-link {
+            border: $debug-border;
+            background-color: #3291ec;
+            padding: 0.5rem;
+            text-decoration: none;
+            color: #000;
+        }
+    }
+}
