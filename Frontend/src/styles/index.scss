@@ -1,35 +1,98 @@
-$debug-border: 1px solid #000;
+$debug-border1: 1px solid #000;
+$debug-border2: 1px solid #f00;
+$main-color: #009ADA;
 
-main {
-    font-family: Ubuntu;
-    width: 80%;
-    margin: auto;
-    display: block;
-    border: $debug-border;
-    padding: 1rem;
-    header {
-        border: $debug-border;
-        width: 100%;
-        margin: auto;
+:root {
+    // margin: auto 0rem;
+    font-family: Bitstream Charter, Ubuntu, monospace;
+    .logo {
+        width: 40px;
+        height: 40px;
+        bottom: 0%;
+        left: 0%;
+        position: fixed;
+    }
+    div#main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        transform: translate(-50%, -50%);
+        header {
+            padding: 5rem 5rem;
+            display: block;
+            box-shadow: 0px 0px 2rem #aaa;
+            border-radius: 5px;
+            .mh_img {
+                display: block;
+                width: 300px;
+                margin: 0rem auto 2rem auto;
+                padding: 0rem;
+            }
+            div#header_text_section {
+                display: block;
+                margin: 1rem 0rem;
+                h1 {
+                    margin: 1rem;
+                    text-align: center;
+                }
+                p {
+                    display: block;
+                    width: max-content;
+                    margin: 0rem auto 0rem auto;
+                    color: #0008;
+                    // border: $debug-border;
+                }
+            }
+        }
+        main {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 50%;
+            padding: 1rem 0rem;
+            div#option_section {
+                display: block;
+                margin: auto;
+                width: 100%;
+                h2 {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    margin: 0rem 0rem 2rem 0rem;
+                }
+                div#link_section {
+                    width: 70%;
+                    height: min-content;
+                    display: block;
+                    margin: auto;
+                    div#form_section {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    .page-link {
+        border-radius: 15px;
+        background-color: $main-color;
+        text-decoration: none;
+        padding: 1.5rem 1rem;
         display: flex;
         justify-content: center;
+        color: #000;
     }
-    .main {
-        display: block;
-        width: 100%;
-        border: $debug-border;
-        padding: 1rem;
-        p {
-            display: block;
-            margin: auto;
-            border: $debug-border;
-        }
-        .form-link {
-            border: $debug-border;
-            background-color: #3291ec;
-            padding: 0.5rem;
-            text-decoration: none;
-            color: #000;
-        }
+    .page-link:hover {
+        background-color: rgba($color: $main-color, $alpha: 0.3);
+        transform: scale(1.05, 1.05);
+    }
+    .results-link {
+        background-color: rgba($main-color, 0.5);
     }
 }

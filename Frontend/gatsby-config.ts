@@ -16,6 +16,9 @@ const config: GatsbyConfig = {
 				implementation: require("node-sass")
 			},
 		},
+		"gatsby-plugin-image",
+		"gatsby-plugin-sharp",
+		"gatsby-transformer-sharp"
 	],
 };
 
