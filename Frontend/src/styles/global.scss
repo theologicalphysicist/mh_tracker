@@ -1,0 +1,38 @@
+$debug-border1: 1px solid #000;
+$debug-border2: 1px solid #f00;
+$main-color: #009ADA;
+
+//- BUTTON
+.form {
+
+}
+
+.index {
+
+}
+
+.main {
+    background-color: rgba($main-color, 0.5);
+    width: 100%;
+}
+
+.form-submit {
+    text-decoration: underline;
+}
+
+button {
+    border-radius: 15px;
+    background-color: $main-color;
+    text-decoration: none;
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    color: #000;
+    border: none;
+    font-size: large;
+}
+
+button:hover {
+    transform: scale(1.05, 1.05);
+    background-color: rgba($color: $main-color, $alpha: 0.3);
+}

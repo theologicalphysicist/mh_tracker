@@ -3,14 +3,13 @@ import React, { useState } from "react";
 import { InputGroupProps } from "../const/types";
 import UserInput from "./UserInput";
 
-const InputGroup: React.FC<InputGroupProps> = ({groupName}) => {
+const InputGroup: React.FC<InputGroupProps> = ({groupName, textOptions}) => {
 
     return (
-        <div>
-            <UserInput groupName={groupName} text="TEMP" />
-            <UserInput groupName={groupName} text="TEMP" />
-            <UserInput groupName={groupName} text="TEMP" />
-            <UserInput groupName={groupName} text="TEMP" />
+        <div className="input-group">
+            {
+                textOptions.map((t_o: string) => <UserInput groupName={groupName} text={t_o} />)
+            }
         </div>
     );
 };

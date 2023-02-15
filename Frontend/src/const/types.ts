@@ -1,8 +1,14 @@
 import type { PageProps } from "gatsby";
 
-type FormProps = {type: string};
-export type FormPageProps = PageProps<FormProps>;
+//- ALL PAGES
+export type ButtonProps = {text: string, page: "form" | "index", role?: "main", type?: "button" | "reset" | "submit", clickFunction: any, form?: string}
+export type FormType = "PHQ" | "GAD" | undefined;
 
-export type QuestionProps = {text: string, groupName: string};
-export type InputGroupProps = {groupName: string};
+//- HOME PAGES
+export type HomePageProps = {formFunction: any};
+
+//- FORM PAGES
+export type FormPageProps = {type: FormType, backFunction?: any};
+export type QuestionProps = {text: string, groupName: string, textOptions: string[]};
+export type InputGroupProps = {groupName: string, textOptions: string[]};
 export type InputProps = {groupName: string, text: string};

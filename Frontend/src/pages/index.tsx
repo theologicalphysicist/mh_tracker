@@ -1,48 +1,32 @@
-import * as React from "react";
+import React, {useState} from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
+//- COMPONENTS
+import HomePage from "../components/Index/HomePage";
+import UserForm from "../components/UserForm";
+
+//- STYLESHEETS
 import "../styles/index.scss";
+import "../styles/global.scss";
+import { FormType } from "../const/types";
 
 const IndexPage: React.FC<PageProps> = () => {
+
+	const [SHOW_FORM, setShowForm] = useState<boolean>(false);
+	const [FORM_TYPE, setFormType] = useState<FormType>(undefined);
+
+	const setForm: any = (new_form_type: FormType, show_form: boolean) => {
+		setShowForm(show_form);
+		setFormType(new_form_type)
+	}
+
 	return (
 		<>
-			<div id="main">
-				<header>
-					<StaticImage
-						src="../images/mh_image.png"
-						alt="clipart logo of brain inside head"
-						loading="lazy"
-						className="mh_img"
-					/>
-					<div id="header_text_section">
-						<h1>
-							Mental Health Tracker
-						</h1>
-						<p>
-							Take a PHQ-9 and/or GAD-7 test, store, and visualise your results
-						</p>
-
-					</div>
-				</header>
-				<main>
-					<div id="option_section">
-						<h2>
-							Choose an option:
-						</h2>
-						<div id="link_section">
-							<div id="form_section">
-								<Link className="page-link" to="/form">Take a PHQ-9 Test</Link>
-								<Link className="page-link" to="/form">Take a GAD-7 Test</Link>
-								<Link className="page-link" to="/form">Take a Both Tests</Link>
-
-							</div>
-							<Link className="page-link results-link" to="/form">View Previous Test Results</Link>
-						</div>
-					</div>
-				</main>
-			</div>
+			{
+				SHOW_FORM ? 
+				<UserForm type={FORM_TYPE} backFunction={setForm} /> : <HomePage formFunction={setForm}/>
+			}
 			<StaticImage 
 				src="../images/favicon-32x32.png" 
 				alt="therefore logo"

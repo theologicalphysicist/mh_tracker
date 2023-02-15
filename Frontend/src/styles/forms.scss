@@ -1,0 +1,19 @@
+// @use "variables";
+@import "variables";
+
+form {
+    display: block;
+    margin: auto;
+    div.question {
+        border: $debug-border1;
+        display: block;
+        margin: 0rem auto 1rem auto;
+        padding: 1rem;
+        label {
+            border: $debug-border1;
+        }
+        div.input-group {
+
+        }
+    }
+}

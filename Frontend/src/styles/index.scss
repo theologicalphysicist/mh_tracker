@@ -63,10 +63,16 @@ $main-color: #009ADA;
                     display: flex;
                     width: 100%;
                     justify-content: center;
-                    margin: 0rem 0rem 2rem 0rem;
+                    margin: 0rem 0rem 1rem 0rem;
+                }
+                p {
+                    display: block;
+                    margin: 0rem auto 2rem auto;
+                    text-align: center;
+                    color: #0008;
                 }
                 div#link_section {
-                    width: 70%;
+                    width: 50%;
                     height: min-content;
                     display: block;
                     margin: auto;
@@ -87,10 +93,6 @@ $main-color: #009ADA;
         display: flex;
         justify-content: center;
         color: #000;
-    }
-    .page-link:hover {
-        background-color: rgba($color: $main-color, $alpha: 0.3);
-        transform: scale(1.05, 1.05);
     }
     .results-link {
         background-color: rgba($main-color, 0.5);
