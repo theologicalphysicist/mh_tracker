@@ -10,7 +10,7 @@ const Question: React.FC<QuestionProps> = ({text, groupName, textOptions}) => {
 
     return (
         <div className="question">
-            <label>{text}</label>
+            <label className="question-label">{text}</label>
             <InputGroup groupName={groupName} textOptions={textOptions}/>
         </div>
     );

@@ -26,8 +26,12 @@ const UserForm: React.FC<FormPageProps> = ({type, backFunction}) => {
                     data[type].questions.map((q: string, i: number) => <Question text={q} groupName={`${type}${i.toString()}`} textOptions={TEXT_OPTIONS} />)
                 }
             </form>
-            <Button text="Back" page="form" clickFunction={backFunction} form={type}/>
-            <Button text="Submit" page="form" type="submit" clickFunction={() => {}} form={type}/>
+            <div id="form_controls">
+                <Button text="Back" page="form" clickFunction={backFunction} form={type}/>
+                <Button text={`Submit ${type} Test Only`} page="form" type="submit" clickFunction={() => {}} form={type}/>
+                <Button text={`Proceed to ${type == "PHQ" ? "GAD" : "PHQ"} Test`} page="form" type="submit" clickFunction={() => {}} form={type}/>
+
+            </div> 
         </>
     );
 };

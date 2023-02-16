@@ -1,19 +1,98 @@
 // @use "variables";
 @import "variables";
 
+h1 {
+    text-align: center;
+}
 form {
-    display: block;
+    display: grid;
+    grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
     margin: auto;
     div.question {
-        border: $debug-border1;
         display: block;
+        width: 90%;
         margin: 0rem auto 1rem auto;
         padding: 1rem;
-        label {
-            border: $debug-border1;
+        box-shadow: 0rem 0rem 0.25rem #aaa;
+        border-radius: 1rem;
+        label.question-label {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            height: 7rem;
+            font-size: 1.25rem;
         }
         div.input-group {
-
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-around;
+            div.input {
+                display: flex;
+                align-items: center;
+                height: 2rem;
+                padding: 0.5rem;
+                border-radius: 0.25rem;
+                &:hover {
+                    box-shadow: 0rem 0rem 0.25rem #aaa;
+                    input[type=radio]:not(:checked) {
+                        border: 3px solid $main-color;
+                    }
+                    label.input-label {
+                        color: $main-color;
+                    }
+                }
+                input[type=radio] {
+                    background-color: #fff;
+                    appearance: none;
+                    margin: auto;
+                    color: #f0f;
+                    width: 1.25rem;
+                    height: 1rem;
+                    border-radius: 50%;
+                    border: 1px solid $main-color;
+                    font: inherit;
+                    display: block;
+                    transition: 120ms border;
+                    &::before {
+                        opacity: 0;
+                        content: "";
+                        width: 0.6rem;
+                        height: 0.6rem;
+                        border-radius: 50%;
+                        margin: auto;
+                        transition: 250ms opacity ease-in-out;
+                        background-color: $main-color;
+                    }
+                    &:checked {
+                        transition: none;
+                        &::before {
+                            display: block;
+                            position: relative;
+                            top: 50%;
+                            opacity: 1;
+                            transform: translate(0%, -50%);
+                        }
+                    }
+                }
+                label.input-label {
+                    font-size: 1.1rem;
+                    width: 100%;
+                    text-align: left;
+                    margin: 0rem 0rem 0rem 3rem;
+                    color: #000b;
+                }
+                &:active {
+                    // background-color: #f00;
+                }
+            }
         }
     }
+}
+div#form_controls {
+    border: $debug-border1;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    // grid-template-rows: 100%;
 }

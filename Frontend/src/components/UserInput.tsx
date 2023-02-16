@@ -5,8 +5,10 @@ const UserInput: React.FC<InputProps> = ({groupName, text}) => {
 
     return (
         <>
-            <label>{text}</label>
-            <input type="radio" name={groupName}></input>
+            <div className="input">
+                <input type="radio" name={groupName} />
+                <label className="input-label">{text}</label>
+            </div>
         </>
     );
 };

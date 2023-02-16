@@ -1,5 +1,3 @@
-import type { PageProps } from "gatsby";
-
 //- ALL PAGES
 export type ButtonProps = {text: string, page: "form" | "index", role?: "main", type?: "button" | "reset" | "submit", clickFunction: any, form?: string}
 export type FormType = "PHQ" | "GAD" | undefined;
