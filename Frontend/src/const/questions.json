@@ -1,15 +1,42 @@
 {
     "PHQ": {
         "questions": [
-            "Little interest or pleasure in doing things?",
-            "Feeling down, depressed, or hopeless?",
-            "Trouble falling or staying asleep, or sleeping too much?",
-            "Feeling tired or having little energy?",
-            "Poor appetite or overeating?",
-            "Feeling bad about yourself - or that you are a failure or have let yourself or your family down?",
-            "Trouble concentrating on things, such as reading the newspaper or watching television?",
-            "Moving or speaking so slowly that other people could have noticed? Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?",
-            "Thoughts that you would be better off dead, or of hurting yourself in some way?"
+            {
+                "text": "Little interest or pleasure in doing things?",
+                "id": "PHQ-1"
+            },
+            {
+                "text": "Feeling down, depressed, or hopeless?",
+                "id": "PHQ-2"
+            },
+            {
+                "text": "Trouble falling or staying asleep, or sleeping too much?",
+                "id": "PHQ-3"
+            },
+            {
+                "text": "Feeling tired or having little energy?",
+                "id": "PHQ-4"
+            },
+            {
+                "text": "Poor appetite or overeating?",
+                "id": "PHQ-5"
+            },
+            {
+                "text": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down?",
+                "id": "PHQ-6"
+            },
+            {
+                "text": "Trouble concentrating on things, such as reading the newspaper or watching television?",
+                "id": "PHQ-7"
+            },
+            {
+                "text": "Moving or speaking so slowly that other people could have noticed? Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?",
+                "id": "PHQ-8"
+            },
+            {
+                "text": "Thoughts that you would be better off dead, or of hurting yourself in some way?",
+                "id": "PHQ-9"
+            }
         ]
     },
     "GAD": {

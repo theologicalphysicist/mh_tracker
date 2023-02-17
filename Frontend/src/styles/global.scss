@@ -30,9 +30,10 @@ button {
     color: #000;
     border: none;
     font-size: large;
+    transition: 200ms background-color linear;
 }
 
 button:hover {
-    transform: scale(1.05, 1.05);
+    transform: scale(1.025, 1.025);
     background-color: rgba($color: $main-color, $alpha: 0.3);
 }
