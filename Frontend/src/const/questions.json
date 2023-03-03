@@ -41,13 +41,34 @@
     },
     "GAD": {
         "questions": [
-            "Feeling nervous, anxious or on edge?",
-            "Not being able to stop or control worrying?",
-            "Worrying too much about different things?",
-            "Trouble relaxing?",
-            "Being so restless that it is hard to sit still?",
-            "Becoming easily annoyed or irritable?",
-            "Feeling afraid as if something awful might happen?"
+            {
+                "text": "Feeling nervous, anxious or on edge?",
+                "id": "GAD-1"
+            },
+            {
+                "text": "Not being able to stop or control worrying?",
+                "id": "GAD-2"
+            },
+            {
+                "text": "Worrying too much about different things?",
+                "id": "GAD-3"
+            },
+            {
+                "text": "Trouble relaxing?",
+                "id": "GAD-4"
+            },
+            {
+                "text": "Being so restless that it is hard to sit still?",
+                "id": "GAD-5"
+            },
+            {
+                "text": "Becoming easily annoyed or irritable?",
+                "id": "GAD-7"
+            },
+            {
+                "text": "Feeling afraid as if something awful might happen?",
+                "id": "GAD-6"
+            }
         ]
     },
     "questionOptions": [

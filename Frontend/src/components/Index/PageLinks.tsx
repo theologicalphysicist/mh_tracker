@@ -2,10 +2,13 @@ import React from "react";
 import { Link } from "gatsby";
 
 //- TYPES
-import { HomePageProps, FormType } from "../../const/types";
+import { HomePageProps, FormType } from "../../redux/types";
 
 //- COMPONENTS
 import Button from "../Global/Button";
+
+//- REDUX
+import { GET_FORM } from "../../redux/actions";
 
 const PageLinks: React.FC<HomePageProps> = ({formFunction}) => {
 

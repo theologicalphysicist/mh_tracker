@@ -6,7 +6,7 @@ import Question from "./Question";
 import Button from "./Global/Button";
 
 //- CONSTS & TYPES
-import { FormPageProps } from "../const/types";
+import { FormPageProps } from "../redux/types";
 // @ts-ignore
 import data from '../const/questions.json';
 

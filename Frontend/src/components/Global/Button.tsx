@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ButtonProps } from "../../const/types";
+import { ButtonProps } from "../../redux/types";
 
 const Button: React.FC<ButtonProps> = ({text, page, role, type, clickFunction, form}) => {
 

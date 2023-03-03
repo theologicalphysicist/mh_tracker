@@ -1,5 +1,5 @@
 import React from "react";
-import { InputProps } from "../const/types";
+import { InputProps } from "../redux/types";
 
 
 

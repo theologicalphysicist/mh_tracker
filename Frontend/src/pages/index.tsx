@@ -1,15 +1,21 @@
 import React, {useState} from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import { Provider } from "react-redux";
 
 //- COMPONENTS
 import HomePage from "../components/Index/HomePage";
 import UserForm from "../components/UserForm";
 
+//- REDUX
+import {STORE} from "../redux/store";
+
+import { formPageReducer } from "../redux/reducers";
+
 //- STYLESHEETS
 import "../styles/index.scss";
 import "../styles/global.scss";
-import { FormType } from "../const/types";
+import { FormType } from "../redux/types";
 
 const IndexPage: React.FC<PageProps> = () => {
 
@@ -19,13 +25,15 @@ const IndexPage: React.FC<PageProps> = () => {
 	const setForm: any = (new_form_type: FormType, show_form: boolean) => {
 		setShowForm(show_form);
 		setFormType(new_form_type)
-	}
+	};
+
+	console.log(STORE.getState().formPage.showForm);
 
 	return (
-		<>
+		<Provider store={STORE}>
 			{
-				SHOW_FORM ? 
-				<UserForm type={FORM_TYPE} backFunction={setForm} /> : <HomePage formFunction={setForm}/>
+				STORE.getState().formPage.showForm ? 
+				<UserForm type={STORE.getState().formPage.formType} backFunction={setForm} /> : <HomePage formFunction={setForm}/>
 			}
 			<StaticImage 
 				src="../images/favicon-32x32.png" 
@@ -34,7 +42,7 @@ const IndexPage: React.FC<PageProps> = () => {
 				className="logo"
 				imgClassName="inner-logo"
 			/>
-		</>
+		</Provider>
 	)
 }
 

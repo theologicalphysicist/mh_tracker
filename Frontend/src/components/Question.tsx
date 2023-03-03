@@ -1,7 +1,7 @@
 import React from "react";
 
 //- TYPES & CONSTANTS
-import { QuestionProps } from "../const/types";
+import { QuestionProps } from "../redux/types";
 
 //
 import InputGroup from "./InputGroup";

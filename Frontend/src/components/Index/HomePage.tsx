@@ -3,7 +3,7 @@ import { HeadFC } from "gatsby";
 
 import Header from "./Header";
 import PageLinks from "./PageLinks";
-import { HomePageProps } from "../../const/types";
+import { HomePageProps } from "../../redux/types";
 
 const HomePage: React.FC<HomePageProps> = ({formFunction}) => {
 

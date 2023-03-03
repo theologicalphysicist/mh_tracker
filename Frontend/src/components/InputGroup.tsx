@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { InputGroupProps } from "../const/types";
+import { InputGroupProps } from "../redux/types";
 import UserInput from "./UserInput";
 
 
