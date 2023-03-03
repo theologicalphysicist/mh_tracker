@@ -19,7 +19,6 @@ const PageLinks: React.FC<HomePageProps> = ({formFunction}) => {
                 <Button text="Take a GAD-7 Test" page="index" clickFunction={() => formFunction("GAD", true)}/>
             </div>
             <Button text="View Previous Test Results" role="main" page="index" clickFunction={() => {}}/>
-            <Link className="page-link results-link" to="/form">View Previous Test Results</Link>
         </div>
     );
 }

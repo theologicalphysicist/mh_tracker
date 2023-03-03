@@ -17,7 +17,7 @@ const INITIAL_STATE: PageState = {
 export const formPageReducer = (state: PageState = INITIAL_STATE, action: any): PageState => {
     switch (action.type) {
         case Actions.LOAD_FORM:
-            return {...state, formType: action.payload}
+            return {...state, showForm: action.payload.showForm, formType: action.payload.formType}
         default:
             return state;
     };
