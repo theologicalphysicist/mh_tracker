@@ -77,7 +77,5 @@ const IndexPage: React.FC = () => {
 
 export const Head: HeadFC = () => <title>Home Page</title>;
 
-// const STATE_TO_PROPS = (state: any): any => ({})
-
 export default IndexPageWrapper;
 

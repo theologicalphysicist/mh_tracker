@@ -8,20 +8,24 @@ type PageState = {
     showForm: boolean,
     formType: FormType
 }
-
+;
 const INITIAL_STATE: PageState = {
     showForm: false,
     formType: undefined,
-}
+};
+
 
 export const formPageReducer = (state: PageState = INITIAL_STATE, action: any): PageState => {
     switch (action.type) {
         case Actions.LOAD_FORM:
-            return {...state, showForm: action.payload.showForm, formType: action.payload.formType}
+            return {...state, showForm: action.payload.showForm, formType: action.payload.formType};
+        case Actions.SUBMIT_FORM:
+            return {...state, };
         default:
             return state;
     };
-}
+};
+
 
 type PHQFormState = {
     q1: boolean,
@@ -70,6 +74,10 @@ const GAD_INITIAL_STATE: GADFormState = {
 export const PHQFormReducer = (state = PHQ_INITIAL_STATE, action: any): PHQFormState => {
     
     switch (action.type) {
+        case Actions.QUESTION_RESPONSE:
+            let new_state: PHQFormState = {...state};
+            // new_state[action.payload.question] = !action.payload.question;
+            return new_state;
         default:
             return state;
     };

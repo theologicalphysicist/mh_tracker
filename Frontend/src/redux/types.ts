@@ -10,10 +10,11 @@ export type FormPageProps = {type: FormType, backFunction?: any};
 export type QuestionProps = {text: string, groupName: string, textOptions: string[], questionID: string};
 export type InputGroupProps = {groupName: string, textOptions: string[], questionID: string};
 export type InputProps = {groupName: string, text: string, questionID: string};
+export type QuestionResponse = {question: string}
 
 //- ACTIONS
 export enum Actions {
     LOAD_FORM = "form/load",
     SUBMIT_FORM = "form/submit",
     QUESTION_RESPONSE = "form/response"
-}
+};

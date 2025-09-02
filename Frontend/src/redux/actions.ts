@@ -1,4 +1,4 @@
-import { Actions, FormType } from "./types";
+import { Actions, FormType, QuestionResponse } from "./types";
 
 
 export const GET_FORM = (form: FormType) => ({
@@ -7,3 +7,8 @@ export const GET_FORM = (form: FormType) => ({
 });
 
 // export const SUBMIT_FORM = (form: FormType, )
+
+export const RESPONSE_SELECTED = (q: QuestionResponse) => ({
+    type: Actions.QUESTION_RESPONSE,
+    payload: q
+});
